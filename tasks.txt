@@ -1,0 +1,37 @@
+- Criar o projeto com .net
+
+- RequestRefundBase
+    - FuncionarioId (Int)
+    - DataSolicitacao (Datetime)
+    - Valor (decimal)
+    - Descrição (string)
+    - Categoria (Enum: "Transporte", "Alimentação" ou "Hospedagem".)
+
+- Criar o model RequestRefundEntity herda de RequestRefundBase
+    - Id
+    - CreateAt
+    - UpdateAt
+
+- Configurar o bd para o sqlite, fazendo as configurações devidas inclusive atualização de data de criação e de atualização e fazendo as migrations das entities
+
+- Instalar e configurar MediatR
+
+- Instalar e configurar FluentValidation
+
+- RefundDtoCommand que faz uso do IRequest do MediatR e herda de RequestRefundBase
+
+- Criar o RefundDtoCommandValidator que usa como base RefundDtoCommand as regras são
+    - FuncionarioId (Obrigatorio)
+    - DataSolicitacao (Datetime)
+    - Valor (Obrigatorio, não pode ser maior que 5000 e nem menor que 1000)
+    - Descrição (Se categoria for Hospedagem a descrição é obrigatorio (Se isso não for possivel penso em outro tipo de validação condicional)) 
+    - Categoria (Obrigatorio, validação do Enum) 
+
+- Criar o RefundDtoCommandHandle que não retorna nada e usa o RefundDtoCommand e implementar o handle do MediatR 
+    - Ver se é aqui qu etenho que fazer a validação ou se isso já acontece de forma automatica
+    - Salva o dado enviado no bd na tabela de RequestRefund
+
+- Criar Controller com um endpoint POST /reembolsos
+    - Recebe do Front um RefundDtoCommand e repassar para o Send
+    - Retornar 200 se deu certo
+    - Retornar badRequest se deu erro generico
