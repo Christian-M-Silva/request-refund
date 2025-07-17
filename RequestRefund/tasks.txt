@@ -28,14 +28,14 @@ x Criar o RefundDtoCommandValidator que usa como base RefundDtoCommand as regras
     x Descrição (Se categoria for Hospedagem a descrição é obrigatorio (Se isso não for possivel penso em outro tipo de validação condicional)) 
     x Categoria (Obrigatorio, validação do Enum) 
 
-- Criar o ValidationBehavior
+x Criar o ValidationBehavior
 
 x Criar o RefundDtoCommandHandle que não retorna nada e usa o RefundDtoCommand e implementar o handle do MediatR 
     x Salva o dado enviado no bd na tabela de RequestRefund
 
-- Criar Controller com um endpoint POST /reembolsos
-    - Recebe do Front um RefundDtoCommand e repassar para o Send
-    - Retornar 200 se deu certo
-    - Retornar badRequest se deu erro generico
+x Criar Controller com um endpoint POST /reembolsos
+    x Recebe do Front um RefundDtoCommand e repassar para o Send
+    x Retornar 200 se deu certo
+    x Retornar badRequest se deu erro generico
 
 - Tentar burlar as regras para ver o que acontece
