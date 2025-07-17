@@ -18,9 +18,9 @@ x Configurar o bd para o sqlite, fazendo as configurações devidas inclusive at
 
 x Instalar e configurar MediatR
 
-- Instalar e configurar FluentValidation
+x Instalar e configurar FluentValidation
 
-- RefundDtoCommand que faz uso do IRequest do MediatR e herda de RequestRefundBase
+x RefundDtoCommand que faz uso do IRequest do MediatR e herda de RequestRefundBase
 
 - Criar o RefundDtoCommandValidator que usa como base RefundDtoCommand as regras são
     - FuncionarioId (Obrigatorio)
