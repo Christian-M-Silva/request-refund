@@ -14,9 +14,9 @@ x Criar o model RequestRefundEntity herda de RequestRefundBase
     x CreateAt
     x UpdateAt
 
-- Configurar o bd para o sqlite, fazendo as configurações devidas inclusive atualização de data de criação e de atualização e fazendo as migrations das entities
+x Configurar o bd para o sqlite, fazendo as configurações devidas inclusive atualização de data de criação e de atualização e fazendo as migrations das entities
 
-- Instalar e configurar MediatR
+x Instalar e configurar MediatR
 
 - Instalar e configurar FluentValidation
 
