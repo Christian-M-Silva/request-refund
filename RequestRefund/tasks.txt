@@ -22,12 +22,11 @@ x Instalar e configurar FluentValidation
 
 x RefundDtoCommand que faz uso do IRequest do MediatR e herda de RequestRefundBase
 
-- Criar o RefundDtoCommandValidator que usa como base RefundDtoCommand as regras são
-    - FuncionarioId (Obrigatorio)
-    - DataSolicitacao (Datetime)
-    - Valor (Obrigatorio, não pode ser maior que 5000 e nem menor que 1000)
-    - Descrição (Se categoria for Hospedagem a descrição é obrigatorio (Se isso não for possivel penso em outro tipo de validação condicional)) 
-    - Categoria (Obrigatorio, validação do Enum) 
+x Criar o RefundDtoCommandValidator que usa como base RefundDtoCommand as regras são
+    x FuncionarioId (Obrigatorio)
+    x Valor (Obrigatorio, não pode ser maior que 500 e nem menor que 1000)
+    x Descrição (Se categoria for Hospedagem a descrição é obrigatorio (Se isso não for possivel penso em outro tipo de validação condicional)) 
+    x Categoria (Obrigatorio, validação do Enum) 
 
 - Criar o RefundDtoCommandHandle que não retorna nada e usa o RefundDtoCommand e implementar o handle do MediatR 
     - Ver se é aqui qu etenho que fazer a validação ou se isso já acontece de forma automatica
@@ -37,3 +36,5 @@ x RefundDtoCommand que faz uso do IRequest do MediatR e herda de RequestRefundBa
     - Recebe do Front um RefundDtoCommand e repassar para o Send
     - Retornar 200 se deu certo
     - Retornar badRequest se deu erro generico
+
+- Tentar burlar as regras para ver o que acontece
