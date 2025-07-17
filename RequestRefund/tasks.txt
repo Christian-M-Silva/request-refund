@@ -1,4 +1,6 @@
-- Criar o projeto com .net
+x Criar o projeto com .net
+
+x Criar o .gitIgnore para o projeto .net
 
 - RequestRefundBase
     - FuncionarioId (Int)
