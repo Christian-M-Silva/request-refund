@@ -1,6 +1,8 @@
 using FluentValidation;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using RequestRefund;
+using RequestRefund.Validators;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,9 @@ builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
 
 var app = builder.Build();
 
