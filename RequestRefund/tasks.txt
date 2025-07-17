@@ -2,17 +2,17 @@ x Criar o projeto com .net
 
 x Criar o .gitIgnore para o projeto .net
 
-- RequestRefundBase
-    - FuncionarioId (Int)
-    - DataSolicitacao (Datetime)
-    - Valor (decimal)
-    - Descrição (string)
-    - Categoria (Enum: "Transporte", "Alimentação" ou "Hospedagem".)
+x RequestRefundBase
+    x FuncionarioId (Guid)
+    x DataSolicitacao (Datetime)
+    x Valor (decimal)
+    x Descrição (string)
+    x Categoria (Enum: "Transporte", "Alimentação" ou "Hospedagem".)
 
-- Criar o model RequestRefundEntity herda de RequestRefundBase
-    - Id
-    - CreateAt
-    - UpdateAt
+x Criar o model RequestRefundEntity herda de RequestRefundBase
+    x Id
+    x CreateAt
+    x UpdateAt
 
 - Configurar o bd para o sqlite, fazendo as configurações devidas inclusive atualização de data de criação e de atualização e fazendo as migrations das entities
 
